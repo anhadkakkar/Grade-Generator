@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade Generator</title>
+        <style>
+        body{
+    background-image: url(https://ih1.redbubble.net/image.4931536089.1006/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    text-align: center;
+}
+p{
+    color: rgb(45, 167, 204);
+    font-weight: bold;
+    font-size: 30px;
+}
+button{
+    padding: 10px;
+    border: none;
+    border-radius:10px ;
+    color: white;
+    background-color: black;
+}
+input{
+    font-size: 20px;
+    color: red;
+}
+label{
+    font-size: 20px;
+    color: red;
+}
+</style>
+    </head>
+    <body>
+        <h1>Grade Generator</h1>
+        <label>Enter Marks</label>
+        <input type="number" id="Marks" min="0" max="100">
+        <button onclick="enterMarks()">Generate Grade</button>
+        <p id="output"></p>
+        <script>
+            function enterMarks(){
+                let inputMarks = document.getElementById("Marks").value;
+                if(inputMarks>=80){
+                    document.getElementById("output").innerHTML = "Your grade is A"; 
+                }
+                else if(inputMarks>=60 && inputMarks<80){
+                    document.getElementById("output").innerHTML = "Your grade is B"; 
+                }
+                else{document.getElementById("output").innerHTML = "Your grade is not passing"; 
+                }
+
+                
+            }
+        </script>
+    </body>
+</html>
